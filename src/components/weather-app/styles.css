@@ -1,0 +1,32 @@
+.app-container {
+    margin: 0;
+    padding: 0;
+    background-color: cyan;
+}
+
+.search-engine {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25;
+    margin-bottom: 25;
+}
+
+.search-engine input {
+    width: 70%;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+}
+
+.search-engine button {
+    width: 20%;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+}

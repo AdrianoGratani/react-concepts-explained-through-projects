@@ -1,0 +1,7 @@
+react uses components, store the components in a folder ./src/components 
+
+inside ./components create a folder to the accordion logic: ./components/accordion
+
+	use some dummy data to make things easier
+
+	create an index.js in ./accordion folder and styles.css, and data.js as well

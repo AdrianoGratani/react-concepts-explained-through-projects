@@ -1,0 +1,67 @@
+.text {
+	top: 5px;
+	position: absolute;
+	z-index: 100;
+	color: red;
+	padding: 40px;	
+}
+
+.container{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.current-image {
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 7px #666;
+	width: 100%;
+	height: 100%;
+}
+ 
+.arrow {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	color: #fff;
+	filter: drop-shadow(0px 0px 5px #555);
+}
+
+.arrow-right {
+	right: 1rem;
+}
+
+.arrow-left {
+	left:	1rem;
+}
+
+.button-container {
+	display: flex;
+	position: absolute;
+	bottom: 1rem;
+}
+
+.circular-button {
+	cursor: pointer;
+	background-color: #fff;
+	height: 15px;
+	width:  15px;
+ 	border-radius: 50%;
+	border: none;
+	outline: none;
+	margin: 0.2rem;
+}
+
+/*hide images or hide buttons*/
+
+.hide-current-image {
+	display: none;
+}
+
+/*button are NEVER hidden: IT MEANS: 'inactive';*/
+.hide-circular-button {
+	background-color: lightgray;
+}

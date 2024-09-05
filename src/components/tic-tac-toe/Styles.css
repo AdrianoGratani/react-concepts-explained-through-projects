@@ -1,0 +1,43 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.s {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    border: 2px solid magenta;
+    cursor: pointer;
+    padding: 0px;
+    float: left;
+}
+
+
+
+
+
+
+.tic-tac-toe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.square {
+    border: 1px solid red;
+    float: left;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    font-size: 40px;
+    margin-right: -1px;
+    margin-top: -1px;
+    cursor: pointer;
+
+}
+
