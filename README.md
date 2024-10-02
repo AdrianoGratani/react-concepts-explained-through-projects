@@ -3,6 +3,8 @@
 
 ### 1. Accordion component ###
 
+TOPIC: useState() hook, .map(), ternary operators.
+
 TASK.
   - create an accordion component, using React. An accordion is a UI pattern which reveals, or hide, its content, based on user interaction (usually by clicking on the item).
   - the accordion is made of two sections: the title and the content. the title has to be always visible.
@@ -25,7 +27,8 @@ LAYOUT
   - below, we find the accordion container. we want to render by default each title, and hide by default every content as well.
   - the .map() method iterates over each object stored in the ./data.js object. for each item found will display a <div> container to display the title.
   - intuitively, whenever the user clicks on the title, we want another <div> for the content to appear below the title. So we attach an
-    `onClick()` to the title as well. the resulting action must take into account if the user chose for multiple of for single selection, in that case we set as argument of the `onClick()` a ternary operator: based on the value stored in useState() enableMultipleSelection, we trigger `handleMultipleSelection()` (if `true`) or `handleMultipleSelection()` (if `false`) 
+    `onClick()` to the title as well. the resulting action must take into account if the user chose for multiple of for single selection, in that case we set as argument of the `onClick()` a ternary operator: based on the value stored in useState() enableMultipleSelection, we trigger `handleMultipleSelection()` (if `true`) or `handleMultipleSelection()` (if `false`)
+    - handleMultipleSelection(), to update useState() `selected` with the current data. this handler function takes an argument, the `id` of the current item clicked (remember, we are currently iterating over ./data.js, which contains this `id` key). Since this is function handles the SINGLE selection, is quite straightforward: it calls useState setSelected() and provides a ternary operator as argument, to check if the current id is already there or no ( = checks IF the id of the item we just clicked IS ALREADY STORED in the useState(), by comparing `id` with `selected`. if this is true, useState will be re-set to initial value (`? null` = close the current content, return to initial state), otherwise, the current `id` will be stored in useState(). ).
     
 
 
