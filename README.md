@@ -21,6 +21,11 @@ LAYOUT
   - a button which toggles on/off multiple selection: it has the `onClick()` event listener, and when the user clicks, it will trigger the stateSetter function for enableMultipleSelection. this useState can hold two values, true or false,
     The button element holds some text, which has to be rendered dynamically, based on current value of the useState() multipleSelection.
     if this is true, it will ask to click to enable the single selection.
+
+  - below, we find the accordion container. we want to render by default each title, and hide by default every content as well.
+  - the .map() method iterates over each object stored in the ./data.js object. for each item found will display a <div> container to display the title.
+  - intuitively, whenever the user clicks on the title, we want another <div> for the content to appear below the title. So we attach an
+    `onClick()` to the title as well. the resulting action must take into account if the user chose for multiple of for single selection, in that case we set as argument of the `onClick()` a ternary operator: based on the value stored in useState() enableMultipleSelection, we trigger `handleMultipleSelection()` (if `true`) or `handleMultipleSelection()` (if `false`) 
     
 
 
