@@ -122,140 +122,45 @@ This function just retrieved the scrolled percentage, this data is ready to be u
   - we declared `handleScrollPercentage`, now it's time to call it. This hook handles collateral effects and performs some tasks based on rendering or some useState mutation. useEffect() takes two arguments: the first argument is a function, the second is an array, which is called by convention the 'dependency array'. This second array is not imperative, it is optional. if useEffect() has no array, it means that it will be triggered at every render of the DOM, without exception
 ( i.e. suppose your component has a useState() counter set to 0, and a useEffect which has NO dependency array, with a setTimeout at 1000ms which increase the count by callling setCount. Timeout triggers the useState, useState triggers a rerendering when update, the re rendering triggers useEffect, this leads to an infinite loop )
 
+- a second useEffect() to call handleScrollPercentage wheneve the user scrolls.
   
 
-LAYOUT:
+LAYOUT: 
+  - Scroll indicator is positioned on top;
 
 /// /// /// ///
 
-# 4. React Scroll Progress Indicator #
+# 5. Github Profile Finder #
 
-TOPICS: 
+TOPICS: useEffect() and useState hooks, object destructuring, user input.
 
-TASK:
+TASK: 
+  User can use this app to find Github users.
 
 TOOLS/PSEUDOCODE:
-
-LAYOUT:
+  - For clarity, we use two components: the app container and a Github user card generator nested inside the container.
+  - user input is stored in its useState variable. When the user press the 'submit' button, userName input is sent to the fetchAPI function and retrieved from api.github.com (`api.github.com/${userName}`)
+  - once fetched data is retrieved in the `userData` useState, we send this data as props to the child component, the User Card component.
+  - after destructuring the prop object, we send each data key in its relative field.
 
 /// /// /// ///
 
-# 4. React Scroll Progress Indicator #
+# 4. React Image Slider #
 
-TOPICS:
+TOPICS: React hooks, API Data Fetch, .map() method, React Icons
 
-TASK:
+TASK: 
+  Create an Image Slide, a component that displays a series of images or content;
+  User is allowed to click on buttons to slide towards next or previous picture.
 
 TOOLS/PSEUDOCODE:
+  - We need images data. we fetch images from an api using an async function, transpile the result into JSON and send it to a useState data array.
+  - to prevent errors we perform data fetching within a `try-catch-finally` block;
+  - ( url for the API, `limit` and `page` url properties as well, are sent from `index.jsx`  )
+  - this function is immediately called by useEffect, any time the url gets retrieved or changes (that's why the second argument is set to `[url]`)
 
-LAYOUT:
+  - we need two functions to move across the image so that the image displayed gets updated according to the choice of the user.
+  - a function to move  to the next image: sets the id of the useState to the current index minus one;
+  - a function to move to previous image.
 
-/// /// /// ///
 
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
-
-# 4. React Scroll Progress Indicator #
-
-TOPICS:
-
-TASK:
-
-TOOLS/PSEUDOCODE:
-
-LAYOUT:
-
-/// /// /// ///
