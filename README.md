@@ -56,6 +56,9 @@ then we add six chars to the '#' in order to make the color code. we need a for 
   `Math.random()` is not enough, because it returns floating points, to avoid that we use `Math.floor()`).  When the for loop is over, we set the useState `colorGenerated` to `hexColor`;
 - another function to generate random RGB color. Set three `let` variables, `r` `g` `b`, each of these storing a call function to the same random number picker we used before. this time we don't need arrays for HEX, we just send the integer `256`: the function will pick a random number between 0 and this argument, and will return it. So: `r` `g` `b` store the integer returned. Lastly, a template literal to generate code accessible by CSS: this variable access the values stored in `r` `g` `b`  (`${}` is the template literal sintax needed to access javascript variables within a string.  `rgb()` is the CSS sintax. RESULT: ``"rgb(${r}, ${g}, ${b})"`` ). now the `rgbColor` variable contains a RGB color code, we set the useState `colorGenerated` with that color;
 
-LAYOUT:
+LAYOUT: 
+- the div container background color is set to the useState `colorGenerated`, which is white by default;
+- one button to generate the color: IF useState current color is set to 'hex' it calls the function previously discussed. the function randomly generates a HEX numbering iterating over a hex char array for six times, sets useState for current color with this newly generated color, then the CSS will make the color appear as background of the container;
+- one button fo generate RGB color
   -
 
