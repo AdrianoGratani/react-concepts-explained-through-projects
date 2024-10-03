@@ -43,9 +43,13 @@ LAYOUT
 
 ### 2. Random Color Picker ###
 
-TOPIC(S): Math.random(), useState hook, ternary operators, event listeners, return statements;
+TOPIC(S): Math.random(), useState hook, ternary operators, event listeners, return statements, addition assignment;
 
 TASKS: 
-  - create a React component which generates and displays random colors on the screen, based on user interactions. User can choose between HEX colors and RGB colors. It should display the color code of last generated color;
+  - create a React component which generates and displays random colors on the screen, based on user interactions. User can choose between HEX colors and RGB colors. It should also display the color code of last generated color;
+
+TOOLS:
+- two useState() hooks. one which stores the selected color numbering (it basically toggles between 'hex' and 'rbg' strings), another to store the generated color code. useState is imported from the React library, it stores data based on user choices/interactions, and updates the data when a re-rendering is triggered.
+- a function to generate random HEX colors. this function has to variables, one is a char array, storing every hexadecimal value from '0' to 'F', the other stores the '#' character (when we return the whole color code randomly generated, we need to attach this carachter so that CSS understands this as HEX color). 
 
 
