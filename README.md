@@ -91,3 +91,160 @@ LAYOUT:
 
 /// /// /// ///
 
+# 4. React Scroll Progress Indicator #
+
+TOPICS: 
+  -useEffect(), useEffect() dependency array, useEffect() cleanups through `return`;
+  - DOM object data retrieval/manipulation;
+  - data fetching, asynchronous Java script (`async`, `await`), `try` ...`catch` blocks, error handling;
+
+TASK: This React component displays multiple products, fetched from an API. Because of the high number of products fetched, the height of the body exceed the viewport height. For a better User Experience, create a visual scroll indicator, so that the user knows  how many products are left to see, and to immediately get insight about the whole size of fetched products.
+
+TOOLS/PSEUDOCODE:
+  - data fetching: create an `async` function. this function takes an argumen: the url of the API we want to fetch data from. This function is made of two parts:
+    - first part is the `try` block, where we try to fetch data from the url and we convert this data in JSON format. Then we set a useState array 'data' to store the `.products` from fetched data JSON object we just created.
+    - second part is the `catch` block, which takes an argument, the error from data fetching (in case it failed). `try ...catch` block prevents our component from crashing. Unexpected errors are prevented and handled accordingly;
+   
+  - We need data from the DOM to calculate the size of the user's scrolled area. This function is `handleScrollPercentage()` and to make this calculation, it retrieves three properties from the DOM object:
+    - 1. `document.documentElement.ScrollTop` = (integer) the pixels scrolled by the user, from top to bottom;
+    - 2. `document.documentElement.scrollHeight` = (integer) the full height of the HTML (`documentElement`) element: the full size of the elemnt.
+    - 3. `document.documentElement.clientHeight` = (integer) the USER viewport height: "what the user can see", based on browser page/ device;
+Now it's time to calculate the exact percentage of scrolled amount.
+Let's say that ScrollHeight is equal to 100px and ClientHeight to 80px, this would mean that the user could scroll for 20px.
+  
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS: 
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
+
+# 4. React Scroll Progress Indicator #
+
+TOPICS:
+
+TASK:
+
+TOOLS/PSEUDOCODE:
+
+LAYOUT:
+
+/// /// /// ///
