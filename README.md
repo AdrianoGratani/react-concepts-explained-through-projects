@@ -5,7 +5,7 @@
 
 TOPIC(S): useState() hook, .map(), ternary operators.
 
-TASK.
+TASKS.
   - create an accordion component, using React. An accordion is a UI pattern which reveals, or hide, its content, based on user interaction (usually by clicking on the item).
   - the accordion is made of two sections: the title and the content. the title has to be always visible while the content is hidden by default.
   - this particular accordion has to enable two different modes: SINGLE SELECTION and MULTIPLE SELECTION: one which enables single selections (you can only collapse one item at the time), the latter which allows multiple selections;
@@ -43,6 +43,9 @@ LAYOUT
 
 ### 2. Random Color Picker ###
 
+TOPIC(S): Math.random(), useState hook, ternary operators, event listeners, return statements;
 
+TASKS: 
+  - create a React component which generates random colors, based on user interactions;
 
 
