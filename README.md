@@ -74,7 +74,9 @@ ELSE IF the current useState for color type is NOT set to 'hex'. in that case th
 TOPICS: React props, props drilling, Modularity (component logic distributed over multiple JSX files), function handlers, event handlers.
 
 TASKS: 
-  - the user is presented with a Button component, once it clicks on the button some content is displayed/hidden. This content is rendered from a child component rendered, imported from the same directory: `Modal.jsx`.
+  - the user is presented with a Button component, once it clicks on the button some content is displayed/hidden.
+  - This content has to be rendered from a child component rendered, imported from the same directory: `Modal.jsx`.
+  - The child commponent has to receive the parent's logic, included useState, as props, in order to display some data in its containers.
 
 TOOLS/PSEUDOCODE:
   Basically, the logic of this component is distributed over two files.
