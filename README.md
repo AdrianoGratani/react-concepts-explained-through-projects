@@ -75,6 +75,6 @@ TOPICS: React props, props drilling, Modularity (component logic distributed ove
 
 TOOLS:
   Basically, the logic of this component is distributed over two files.
-  - `ModalTest` 
-  
+  - `ModalTest` is the container component. The useState to set the current user choice ("show modal" or "not show modal"), a function `handleToggleModal()` which set the 
+    
   
