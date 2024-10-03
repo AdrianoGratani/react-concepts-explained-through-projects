@@ -39,13 +39,13 @@ LAYOUT
     - `handleMultipleSelection()` works similarly, but is more complex. It takes the current `Id` of the element triggered by the user click, and perform a comparison over the useState array `multipleSelectedItems` (this array stores the `Id` of every item currently collapsed): if the current `Id` argument is NOT in the array (we use the `indexOf()` js method to find it out), we `push()` it in the array. Otherwise we `pop()` it.
     - (NOTE: to avoid data corruption, is better performing array manipulation over a copy of the array, that's why I chose to impement a spread operator and only after every evaluation the useState `multipleSelectedItems` array is set with the copy).
     
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /// /// ///
 
 ### 2. Random Color Picker ###
 
 TOPIC(S): Math.random(), useState hook, ternary operators, event listeners, return statements;
 
 TASKS: 
-  - create a React component which generates random colors, based on user interactions;
+  - create a React component which generates and displays random colors on the screen, based on user interactions. User can choose between HEX colors and RGB colors. It should display the color code of last generated color;
 
 
