@@ -50,6 +50,8 @@ TASKS:
 
 TOOLS:
 - two useState() hooks. one which stores the selected color numbering (it basically toggles between 'hex' and 'rbg' strings), another to store the generated color code. useState is imported from the React library, it stores data based on user choices/interactions, and updates the data when a re-rendering is triggered.
-- a function to generate random HEX colors. this function has to variables, one is a char array, storing every hexadecimal value from '0' to 'F', the other stores the '#' character (when we return the whole color code randomly generated, we need to attach this carachter so that CSS understands this as HEX color). 
-
+- a function to generate random HEX colors. this function has to variables, one is a char array, storing every hexadecimal value from '0' to 'F', the other, `hexColor` stores the '#' character (when we return the whole color code randomly generated, we need to attach this character so that CSS understands this as HEX color). 
+then we add six chars to the '#' in order to make the color code. we need a for loop to repeat the following: ADD (`+=`) to `hexColor` a randomly chosen value from the `hexValuesArray`:
+  (explanation: for each step of the loop, we want to access a random partition of the array, so instead of `array[i]`, we use another function which takes the `length` of the char array and return a random number between 0 and the argument.
+  `Math.random()` is not enough, because it returns floating points, to avoid that we use `Math.floor()`)
 
