@@ -3,7 +3,7 @@
 
 ### 1. Accordion component ###
 
-TOPIC: useState() hook, .map(), ternary operators.
+TOPIC(S): useState() hook, .map(), ternary operators.
 
 TASK.
   - create an accordion component, using React. An accordion is a UI pattern which reveals, or hide, its content, based on user interaction (usually by clicking on the item).
@@ -39,5 +39,10 @@ LAYOUT
     - `handleMultipleSelection()` works similarly, but is more complex. It takes the current `Id` of the element triggered by the user click, and perform a comparison over the useState array `multipleSelectedItems` (this array stores the `Id` of every item currently collapsed): if the current `Id` argument is NOT in the array (we use the `indexOf()` js method to find it out), we `push()` it in the array. Otherwise we `pop()` it.
     - (NOTE: to avoid data corruption, is better performing array manipulation over a copy of the array, that's why I chose to impement a spread operator and only after every evaluation the useState `multipleSelectedItems` array is set with the copy).
     
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+### 2. Random Color Picker ###
+
+
 
 
