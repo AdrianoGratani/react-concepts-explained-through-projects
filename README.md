@@ -65,13 +65,16 @@ ELSE IF the current useState for color type is NOT set to 'hex'. in that case th
 
 - another h1 diplays the color code.
 
-  /// /// /// ///
+/// /// /// ///
 
-  ### 3. React Modal Component ##
+### 3. React Modal Component ##
 
-  { definition: a modal is a UI element which displays on the screen with priority over any other elements: it basically 'covers' them. It is used to drive user's attention towards important piece of information/actions/marketing etc... }
+{ definition: a modal is a UI element which displays on the screen with priority over any other elements: it basically 'covers' them. It is used to drive user's attention towards important piece of information/actions/marketing etc... }
 
-  TOPICS: React props, props drilling, Modularity (component logic distributed over multiple JSX files), function handlers, event handlers.
+TOPICS: React props, props drilling, Modularity (component logic distributed over multiple JSX files), function handlers, event handlers.
 
+TOOLS:
+  Basically, the logic of this component is distributed over two files.
+  - `ModalTest` 
   
   
