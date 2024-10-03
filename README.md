@@ -58,7 +58,7 @@ then we add six chars to the '#' in order to make the color code. we need a for 
 
 LAYOUT: 
 - the div container background color is set to the useState `colorGenerated`, which is white by default;
-- one button to generate the color: IF useState current color is set to 'hex' it calls the function previously discussed. the function randomly generates a HEX numbering iterating over a hex char array for six times, sets useState for current color with this newly generated color, then the CSS will make the color appear as background of the container;
-- one button fo generate RGB color
-  -
+- one button to generate the color, implementing logical ternary operators: IF useState current color is set to 'hex' it calls the hex color-code-generator function, previously discussed. this function randomly generates a HEX numbering iterating over a hex numbers char array for six times, sets useState for current color with this newly generated color, then the CSS will make the color appear as background of the container;
+ELSE IF the current useState for color type is NOT set to 'hex'. in that case the RGB color generator function previously discussed is called.
+
 
