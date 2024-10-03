@@ -86,4 +86,5 @@ TOOLS/PSEUDOCODE:
   - `Modal.jsx` is the second component. is imported/nested/called inside `ModalTest` component. This component receives props data from its parent component and uses it to perform conditional rendering within its div containers.
 
 LAYOUT:
-  - `ModalTest` stores to UI elements: a `<button>` and the `<Modal />`. When the user clicks the button, an event listener is triggered and calls the function `handleToggleModal`
+  - `ModalTest`, the parent component, stores UI elements: a `<button>` and the `<Modal />`. When the user clicks the button, an event listener is triggered and calls the function `handleToggleModal`
+  - `Modal`, the child component receives props data from its parent and renders it in separate `<div>`containers
