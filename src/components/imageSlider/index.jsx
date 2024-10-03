@@ -39,10 +39,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight, SlMagnifier } from "react-icons/sl"; //https://react-icons.github.io/react-icons/icons/sl/
-
-
 export default function ImageSlider({url, limit = 5, page = 1}) {
-
 	const [] = useState(0);
 	const [ imagesApiData, setImagesApiData] = useState([]);
 	const [ errorMessage, setErrorMessage ] = useState(null);
@@ -50,54 +47,20 @@ export default function ImageSlider({url, limit = 5, page = 1}) {
 	const [ indexCurrentlyDisplayedImage, setIndexCurrentlyDisplayedImage ] = useState(0);
 
 	async function importApiImagesToJsonData(currentUrlApi) {
-		
-		if(dataLoadingStateMonitor === false){
-			setDataLoadingStateMonitor(true);
-		}
-
-		try{
-			const dataFetchFromApi = await fetch(`${currentUrlApi}?page=${page}&limit=${limit}`);
+		if(dataLoadingStateMonitor === false){   setDataLoadingStateMonitor(true); }
+		try{    const dataFetchFromApi = await fetch(`${currentUrlApi}?page=${page}&limit=${limit}`);
 			const dataJsonFromDataFetched = await dataFetchFromApi.json();
-
-			if (dataJsonFromDataFetched) {
-				setImagesApiData(dataJsonFromDataFetched);
-			}
+			if (dataJsonFromDataFetched) { setImagesApiData(dataJsonFromDataFetched); }
 		}
-		catch(err){
-			setErrorMessage(err.message);
-			console.log(err.message)
-		}
-		finally {
-			setDataLoadingStateMonitor(false);
-		}
+		catch(err){   setErrorMessage(err.message);  }
+		finally {  setDataLoadingStateMonitor(false);  }
 	}
 
-	useEffect(
-		() => {
-			if (url !== '') {
-				setDataLoadingStateMonitor(true);
-            	console.log("url exists");
-				importApiImagesToJsonData(url);
-		    }
-		}, [url]
-	)
+	useEffect(()=> {if (url !=='') { setDataLoadingStateMonitor(true); importApiImagesToJsonData(url);}}, [url] )
 
-	function getPreviousImageId(){
+	function getPreviousImageId(){ setIndexCurrentlyDisplayedImage( indexCurrentlyDisplayedImage === 0 ? imagesApiData.length - 1 : indexCurrentlyDisplayedImage - 1 )}
 
-		setIndexCurrentlyDisplayedImage(
-			indexCurrentlyDisplayedImage === 0
-				? imagesApiData.length - 1
-				: indexCurrentlyDisplayedImage - 1
-		)
-	}
-
-	function  getNextImageId() {
-		setIndexCurrentlyDisplayedImage(
-			indexCurrentlyDisplayedImage === imagesApiData.length - 1
-				? 0
-				: indexCurrentlyDisplayedImage + 1
-		)
-	}
+	function  getNextImageId() { setIndexCurrentlyDisplayedImage( indexCurrentlyDisplayedImage === imagesApiData.length - 1 ? 0 : indexCurrentlyDisplayedImage + 1 )}
 
 	if(dataLoadingStateMonitor) {
 		return (
