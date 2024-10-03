@@ -61,4 +61,10 @@ LAYOUT:
 - one button to generate the color, implementing logical ternary operators: IF useState current color is set to 'hex' it calls the hex color-code-generator function, previously discussed. this function randomly generates a HEX numbering iterating over a hex numbers char array for six times, sets useState for current color with this newly generated color, then the CSS will make the color appear as background of the container;
 ELSE IF the current useState for color type is NOT set to 'hex'. in that case the RGB color generator function previously discussed is called.
 
+- at the bottom, an h1 tag displays the name of color type selected, using ternary operators: IF the useState for selected color type is 'hex', 'HEX' is displayed, otherwise 'RGB' is displayed.
 
+- another h1 diplays the color code.
+
+  /// /// /// ///
+
+  # 3. #
