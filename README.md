@@ -75,6 +75,10 @@ TOPICS: React props, props drilling, Modularity (component logic distributed ove
 
 TOOLS:
   Basically, the logic of this component is distributed over two files.
-  - `ModalTest` is the container component. The useState to keep the current user choice ("show modal" is `true` and "not show modal" is `false`), a function `handleToggleModal()` which sets the previous useState by calling its setter with an argument which reverts the current value stored in showModal.
-    
+  - `ModalTest.jsx` is the container component. The useState to keep the current user choice ("show modal" is `true` and "not show modal" is `false`), a function `handleToggleModal()` which sets the previous useState by calling its setter with an argument which reverts the current value stored in showModal.
+(in the 'LAYOUT' section we'll explore in details how to implement this logic in the UI.)
+
+  - `Modal.jsx` is the second component. is imported/nested/called inside `ModalTest` component. This component receives props data from its parent component and uses it to perform conditional rendering. within its div containers.
+
+
   
