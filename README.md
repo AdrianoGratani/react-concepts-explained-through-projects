@@ -48,7 +48,7 @@ TOPIC(S): Math.random(), useState hook, ternary operators, event listeners, retu
 TASKS: 
   - create a React component which generates and displays random colors on the screen, based on user interactions. User can choose between HEX colors and RGB colors. It should also display the color code of last generated color;
 
-TOOLS:
+TOOLS/PSEUDOCODE:
 - two useState() hooks. one which stores the selected color numbering (it basically toggles between 'hex' and 'rbg' strings), another to store the generated color code. useState is imported from the React library, it stores data based on user choices/interactions, and updates the data when a re-rendering is triggered.
 - a function to generate random HEX colors. this function has to variables, one is a char array, storing every hexadecimal value from '0' to 'F', the other, `hexColor` stores the '#' character (when we return the whole color code randomly generated, we need to attach this character so that CSS understands this as HEX color). 
 then we add six chars to the '#' in order to make the color code. we need a for loop to repeat the following: ADD (`+=`) to `hexColor` a randomly chosen value from the `hexValuesArray`:
@@ -73,10 +73,15 @@ ELSE IF the current useState for color type is NOT set to 'hex'. in that case th
 
 TOPICS: React props, props drilling, Modularity (component logic distributed over multiple JSX files), function handlers, event handlers.
 
-TOOLS:
+TASKS: 
+  - the user is presented with a Button component, once it clicks on the button some content is displayed/hidden. This content is rendered from a child component rendered, imported from the same directory: `Modal.jsx`.
+
+TOOLS/PSEUDOCODE:
   Basically, the logic of this component is distributed over two files.
   - `ModalTest.jsx` is the container component. The useState to keep the current user choice ("show modal" is `true` and "not show modal" is `false`), a function `handleToggleModal()` which sets the previous useState by calling its setter with an argument which reverts the current value stored in showModal.
 (in the 'LAYOUT' section we'll explore in details how to implement this logic in the UI.)
 
   - `Modal.jsx` is the second component. is imported/nested/called inside `ModalTest` component. This component receives props data from its parent component and uses it to perform conditional rendering within its div containers.
 
+LAYOUT:
+  - `ModalTest` stores to UI elements: a `<button>` and the `<Modal />`. When the user clicks the button, an event listener is triggered and calls the function `handleToggleModal`
