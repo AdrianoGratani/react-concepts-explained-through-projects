@@ -87,4 +87,7 @@ TOOLS/PSEUDOCODE:
 
 LAYOUT:
   - `ModalTest`, the parent component, stores UI elements: a `<button>` and the `<Modal />`. When the user clicks the button, an event listener is triggered and calls the function `handleToggleModal`
-  - `Modal`, the child component receives props data from its parent and renders it in separate `<div>`containers
+  - `Modal`, the child component receives props data from its parent and renders it in separate `<div>`containers. Before even attempting to render props data, we must check if we received props arguments, to avoid 404 errors. We can solve this by implementing ternary operators: if the prop is true (which means: it is currently storing some data arguments sent from `ModalTest` ), then render it. Otherwise render preset fallback UI text.
+
+/// /// /// ///
+
