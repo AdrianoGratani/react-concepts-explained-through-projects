@@ -110,7 +110,18 @@ TOOLS/PSEUDOCODE:
     - 2. `document.documentElement.scrollHeight` = (integer) the full height of the HTML (`documentElement`) element: the full size of the elemnt.
     - 3. `document.documentElement.clientHeight` = (integer) the USER viewport height: "what the user can see", based on browser page/ device;
 Now it's time to calculate the exact percentage of scrolled amount.
-Let's say that ScrollHeight is equal to 100px and ClientHeight to 80px, this would mean that the user could scroll for 20px.
+Let's say that user scrolled 10px from top, that ScrollHeight is equal to 100px and ClientHeight to 80px, this would mean that the user has 20px of scrollable space and it already scrolled 10px, so it's halfway through, the percentage is 50%.
+So if we calculate the following:
+a) .scrollHeight - .clientHeight we get 20.
+b) .scrollTop / 20 we get .5;
+c) .5 * 100 we get 50%;
+
+This function just retrieved the scrolled percentage, this data is ready to be used.
+
+- the useEffect() hook, to retrieve data from the API.
+  - we declared `handleScrollPercentage`, now it's time to call it. This hook handles collateral effects and performs some tasks based on rendering or some useState mutation. useEffect() takes two arguments: the first argument is a function, the second is an array, which is called by convention the 'dependency array'. This second array is not imperative, it is optional. if useEffect() has no array, it means that it will be triggered at every render of the DOM, without exception
+( i.e. suppose your component has a useState() counter set to 0, and a useEffect which has NO dependency array, with a setTimeout at 1000ms which increase the count by callling setCount. Timeout triggers the useState, useState triggers a rerendering when update, the re rendering triggers useEffect, this leads to an infinite loop )
+
   
 
 LAYOUT:
